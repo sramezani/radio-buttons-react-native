@@ -5,7 +5,7 @@ Animated radio buttons component for react native
 
 
 # DEMO
-![](https://github.com/sramezani/radio-buttons-react-native/blob/master/example/rbrn.gif)
+![](https://user-images.githubusercontent.com/33284430/66270229-7ef73200-e883-11e9-98bf-4dddd01cd78c.gif)
 
 # install
     npm install radio-buttons-react-native --save
