@@ -1,35 +1,36 @@
 {
-    "name": "radio-buttons-react-native",
-    "version": "1.0.0",
-    "description": "Animated radio buttons component for react native",
-    "main": "RadioButtonRN.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/sramezani/radio-buttons-react-native"
-    },
-    "keywords": [
-      "react-component",
-      "react-native",
-      "ios",
-      "android",
-      "form",
-      "button",
-      "radio-button",
-      "radio-buttons",
-      "react-native-radio-button",
-      "animated",
-      "react",
-      "mobile"
-    ],
-    "author": "Siamak Ramezani <siamak.rp@gmail.com>",
-    "license": "MIT",
-    "bugs": {
-      "url": "https://github.com/sramezani/radio-buttons-react-native/issues"
-    },
-    "homepage": "https://github.com/sramezani/radio-buttons-react-native#readme"
+  "name": "radio-buttons-react-native",
+  "version": "1.0.1",
+  "description": "Animated radio buttons component for react native",
+  "main": "RadioButtonRN.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sramezani/radio-buttons-react-native.git"
+  },
+  "keywords": [
+    "react-component",
+    "react-native",
+    "ios",
+    "android",
+    "form",
+    "button",
+    "radio-button",
+    "radio-buttons",
+    "react-native-radio-button",
+    "animated",
+    "react",
+    "mobile"
+  ],
+  "author": "Siamak Ramezani <siamak.rp@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sramezani/radio-buttons-react-native/issues"
+  },
+  "homepage": "https://github.com/sramezani/radio-buttons-react-native#readme",
+  "directories": {
+    "example": "example"
   }
-
+}
