@@ -169,7 +169,7 @@ class RadioButtonRN extends React.Component {
                             </View>
 
                             <View style={[styles.centerProductBox]}>
-                                <Text style={[styles.text, {
+                                <Text style={[{
                                     color: textColor
                                 }, textStyle]}>
                                     {item.label}
@@ -225,11 +225,6 @@ const styles = StyleSheet.create({
     circleFill: {
         borderWidth: 1,
         borderRadius: 10000
-    },
-    text: {
-        fontSize: 16,
-        fontWeight: '700',
-        fontFamily: 'Poppins-Regular'
     }
 });
 
