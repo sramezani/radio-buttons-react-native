@@ -1,6 +1,6 @@
 {
   "name": "radio-buttons-react-native",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Animated radio buttons component for react native",
   "main": "RadioButtonRN.js",
   "scripts": {
