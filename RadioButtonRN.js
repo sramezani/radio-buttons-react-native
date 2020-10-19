@@ -137,12 +137,12 @@ class RadioButtonRN extends React.Component {
                         >
                             <View style={styles.leftProductBox}>
                                 <View style={[ icon ? styles.icon : styles.circle, {
-                                    borderColor: activeIndex === index ? activeColor : deactiveColor,
+                                    borderColor: (activeIndex === index && !disabled) ? activeColor : deactiveColor,
                                     width: circleSize + 8,
                                     height: circleSize + 8
                                 },
                                 icon && {
-                                    borderColor: activeIndex === index ? 'transparent' : deactiveColor
+                                    borderColor: (activeIndex === index && !disabled) ? 'transparent' : deactiveColor
                                 }
                                 ]}>
                                     <Animated.View style={{
@@ -158,8 +158,8 @@ class RadioButtonRN extends React.Component {
                                                     icon
                                                 :
                                                     <View style={[styles.circleFill, {
-                                                        backgroundColor: activeIndex === index ? activeColor : deactiveColor,
-                                                        borderColor: activeIndex === index ? activeColor : deactiveColor,
+                                                        backgroundColor: (activeIndex === index && !disabled) ? activeColor : deactiveColor,
+                                                        borderColor: (activeIndex === index && !disabled) ? activeColor : deactiveColor,
                                                         width: circleSize,
                                                         height: circleSize
                                                     }]} />
