@@ -79,6 +79,10 @@ class RadioButtonRN extends React.Component {
     reset(){
 	 this.setState({activeIndex: -1});
     }
+	
+    setActive(item, activeIndex){
+      _changeRadio(item, activeIndex);
+    }
 
     _checkAnimatons() {
         const { animationTypes } = this.props;
