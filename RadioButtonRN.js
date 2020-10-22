@@ -75,6 +75,14 @@ class RadioButtonRN extends React.Component {
             this._checkAnimatons();
         }
     }
+    
+    reset(){
+	 this.setState({activeIndex: -1});
+    }
+	
+    setActive(item, activeIndex){
+      this._changeRadio(item, activeIndex);
+    }
 
     _checkAnimatons() {
         const { animationTypes } = this.props;
@@ -116,7 +124,7 @@ class RadioButtonRN extends React.Component {
 
 	render() {
 		let { activeIndex, fadeAnim, animations } = this.state;
-        let { boxStyle, style, circleSize, textStyle, data, icon, activeColor, deactiveColor, boxActiveBgColor, boxDeactiveBgColor, box, textColor } = this.props;
+        let { boxStyle, style, circleSize, textStyle, data, icon, activeColor, deactiveColor, boxActiveBgColor, boxDeactiveBgColor, box, textColor, disabled } = this.props;
 
 		return (
             <View style={style}>
@@ -133,15 +141,16 @@ class RadioButtonRN extends React.Component {
                             , boxStyle]}
                             activeOpacity={0.9}
                             onPress={() => this._changeRadio(item, index)}
+			    disabled={disabled}
                         >
                             <View style={styles.leftProductBox}>
                                 <View style={[ icon ? styles.icon : styles.circle, {
-                                    borderColor: activeIndex === index ? activeColor : deactiveColor,
+                                    borderColor: (activeIndex === index && !disabled) ? activeColor : deactiveColor,
                                     width: circleSize + 8,
                                     height: circleSize + 8
                                 },
                                 icon && {
-                                    borderColor: activeIndex === index ? 'transparent' : deactiveColor
+                                    borderColor: (activeIndex === index && !disabled) ? 'transparent' : deactiveColor
                                 }
                                 ]}>
                                     <Animated.View style={{
@@ -157,8 +166,8 @@ class RadioButtonRN extends React.Component {
                                                     icon
                                                 :
                                                     <View style={[styles.circleFill, {
-                                                        backgroundColor: activeIndex === index ? activeColor : deactiveColor,
-                                                        borderColor: activeIndex === index ? activeColor : deactiveColor,
+                                                        backgroundColor: (activeIndex === index && !disabled) ? activeColor : deactiveColor,
+                                                        borderColor: (activeIndex === index && !disabled) ? activeColor : deactiveColor,
                                                         width: circleSize,
                                                         height: circleSize
                                                     }]} />
