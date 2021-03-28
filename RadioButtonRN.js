@@ -116,7 +116,7 @@ class RadioButtonRN extends React.Component {
 
 	render() {
 		let { activeIndex, fadeAnim, animations } = this.state;
-        let { boxStyle, style, circleSize, textStyle, data, icon, activeColor, deactiveColor, boxActiveBgColor, boxDeactiveBgColor, box, textColor } = this.props;
+        let { boxStyle, style, circleSize, titleTextStyle, descTextStyle, data, icon, activeColor, deactiveColor, boxActiveBgColor, boxDeactiveBgColor, box, titleTextColor, descTextColor } = this.props;
 
 		return (
             <View style={style}>
@@ -168,12 +168,20 @@ class RadioButtonRN extends React.Component {
                                 </View>
                             </View>
 
-                            <View style={[styles.centerProductBox]}>
-                                <Text style={[{
-                                    color: textColor
-                                }, textStyle]}>
-                                    {item.label}
-                                </Text>
+                                <View style={[styles.centerProductBox]}>
+                                    <Text style={[{
+                                        color: titleTextColor,
+                                        fontSize: 15
+                                    }, titleTextStyle]}>
+                                        {item.label}
+                                    </Text>
+                                    {
+                                        item.desc && <Text style={[{
+                                            color: descTextColor
+                                        }, descTextStyle]}>
+                                            {item.desc}
+                                        </Text>
+                                    }
                             </View>
                         </TouchableOpacity>
                     )
@@ -232,7 +240,8 @@ const styles = StyleSheet.create({
 RadioButtonRN.propTypes = {
 	style: PropTypes.object,
 	boxStyle: PropTypes.object,
-	textStyle: PropTypes.object,
+    titleTextStyle: PropTypes.object,
+    descTextStyle: PropTypes.object,
     initial: PropTypes.number,
     circleSize: PropTypes.number,
     duration: PropTypes.number,
@@ -245,14 +254,16 @@ RadioButtonRN.propTypes = {
     // textDeactiveColor: PropTypes.string,
     boxActiveBgColor: PropTypes.string,
     boxDeactiveBgColor: PropTypes.string,
-    textColor: PropTypes.string,
+    titleTextColor: PropTypes.string,
+    descTextColor: PropTypes.string,
     box: PropTypes.bool,
 };
 
 RadioButtonRN.defaultProps = {
 	style: {},
 	boxStyle: {},
-	textStyle: {},
+    titleTextStyle: {},
+    descTextStyle: {},
     initial: -1,
     circleSize: 18,
     duration: 500,
@@ -263,7 +274,8 @@ RadioButtonRN.defaultProps = {
     deactiveColor: '#e2e2e2',
     boxActiveBgColor: '#e1f5fe33',
     boxDeactiveBgColor: '#fff',
-    textColor: '#383838',
+    titleTextColor: '#383838',
+    descTextColor: 'grey',
     box: true,
 };
 
