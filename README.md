@@ -69,6 +69,7 @@ see this simple [example](https://github.com/sramezani/radio-buttons-react-nativ
 | boxActiveBgColor  | background color of active item, when box is true | '#e1f5fe33' |
 | boxDeactiveBgColor  | background color of deactive items, when box is true  | '#fff' |
 | textColor  | label color  | '#383838' |
+| disabled   | flag to disable radio buttons | false | 
 
 # Contributing
 Yes of course! Welcome :)
